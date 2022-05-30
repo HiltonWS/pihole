@@ -159,7 +159,5 @@ spec:
     name: dhcp
   externalIPs:
   - 10.0.0.101
-  - "2001:818:dd8f:5c00:e65f:1ff:fe25:2d32"
-  ipFamilies:
-  - IPv4
-  - IPv6
+  - "fdc5:3cf0:8f1b:10:f413:7f81:14f0:101"
+  ipFamilyPolicy: PreferDualStack

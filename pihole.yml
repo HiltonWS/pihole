@@ -133,6 +133,11 @@ spec:
       - name: pihole-local-dnsmasq-volume
         persistentVolumeClaim:
           claimName: pihole-local-dnsmasq-claim
+      dnsPolicy: "None"
+      dnsConfig:
+        nameservers:
+          - 1.1.1.1
+
 ---
 apiVersion: v1
 kind: Service
@@ -159,7 +164,5 @@ spec:
     name: dhcp
   externalIPs:
   - 10.0.0.101
-  - "2001:818:dd8f:5c00:e65f:1ff:fe25:2d32"
   ipFamilies:
   - IPv4
-  - IPv6
